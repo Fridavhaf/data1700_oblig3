@@ -1,11 +1,9 @@
-CREATE TABLE ticket
-(
-    id      INTEGER AUTO_INCREMENT NOT NULL,
-    movieName VARCHAR(255) NOT NULL,
-    nrOfTickets INTEGER NOT NULL,
-    firstName    VARCHAR(255) NOT NULL,
-    lastName VARCHAR(255) NOT NULL,
-    phoneNumber CHAR(8) NOT NULL,
-    emailAddress VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+CREATE TABLE ticket(
+   id INTEGER PRIMARY KEY AUTO_INCREMENT,
+   movie_name VARCHAR(255) NOT NULL,
+   nr_of_tickets INTEGER NOT NULL,
+   first_name    VARCHAR(255) NOT NULL,
+   last_name VARCHAR(255) NOT NULL,
+   phone_number CHAR(8) NOT NULL,
+   email_address VARCHAR(255) NOT NULL
 );

@@ -1,77 +1,78 @@
 package spring.oblig3;
 
 public class Ticket {
-    private String movieName;
-    private int nrOfTickets;
-    private String firstName;
-    private String lastName;
-    private String phoneNumber;
-    private String emailAddress;
+    private String movie_name;
+    private Integer nr_of_tickets;
+    private String first_name;
+    private String last_name;
+    private String phone_number;
+    private String email_address;
     private Integer id;
 
-    public Ticket(String movieName, int nrOfTickets, String firstName, String lastName,
-                  String phoneNumber, String emailAddress) {
-        this.movieName = movieName;
-        this.nrOfTickets = nrOfTickets;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.emailAddress = emailAddress;
+    public Ticket(String movie_name, Integer nr_of_tickets, String first_name, String last_name,
+                  String phone_number, String email_address) {
+        this.movie_name = movie_name;
+        this.nr_of_tickets = nr_of_tickets;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.phone_number = phone_number;
+        this.email_address = email_address;
     }
 
     public Ticket() { }
 
-    public String getMovieName() {
-        return movieName;
+    public String getMovie_name() {
+        return movie_name;
     }
 
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
+    public void setMovie_name(String movie_name) {
+        this.movie_name = movie_name;
     }
 
-    public int getNrOfTickets() {
-        return nrOfTickets;
+    public Integer getNr_of_tickets() {
+        return nr_of_tickets;
     }
 
-    public void setNrOfTickets(int nrOfTickets) {
-        this.nrOfTickets = nrOfTickets;
+    public void setNr_of_tickets(Integer nr_of_tickets) {
+        this.nr_of_tickets = nr_of_tickets;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone_number() {
+        return phone_number;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getEmail_address() {
+        return email_address;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmail_address(String email_address) {
+        this.email_address = email_address;
     }
 
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }

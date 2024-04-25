@@ -1,0 +1,14 @@
+body{
+    background-color: #FBE6FC;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.edit_submit{
+    display: inline-block;
+}
+#nrOfTickets{
+    margin-left: 0.3rem;
+    width: 38px;
+}

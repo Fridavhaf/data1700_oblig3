@@ -2,45 +2,63 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Bestilling av kinovilletter</title>
+    <title>Bestill billetter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styling.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- it is okay to place the link to the js file in the header, because we have the ready function -->
     <script src="script.js"></script>
+    <script src="validation.js"></script>
 
 </head>
 <body>
 
-<h1>Bestilling av kinobilletter</h1>
+<div class="container">
+    <h1>Bestilling av kinobilletter</h1>
+    <div id="errorTicket"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <label for="movie">Velg film:</label>
+            <select name="movie" id="movie">
+                <option value="" selected disabled>Velg film her</option>
+                <option value="Kung fu Panda">Kung fu Panda</option>
+                <option value="Shrek">Shrek</option>
+                <option value="Rottatouille">Rottatouille</option>
+            </select>
+            <span id="errorMovie"></span>
 
-<label for="movie">Velg film:</label>
-<select name="movie" id="movie">
-    <option value="" selected disabled>Velg film her</option>
-    <option value="Kung fu Panda">Kung fu Panda</option>
-    <option value="Shrek">Shrek</option>
-    <option value="Rottatouille">Rottatouille</option>
-</select>
-<span id="errorMovie"></span>
+            <br><br>
+            <label for="nrOfTickets">Antall</label>
+            <input type="text" id="nrOfTickets">
+            <span id="errorNumber"></span>
 
-<br><br>
-<label for="nrOfTickets">Antall</label>
-<input type="text" id="nrOfTickets" style="width: 28px">
-<span id="errorNumber"></span>
-<!--Can I style width with bootstrap?-->
+            <br><br>
+            <table class="table table-striped">
+                <tr><td><label for="fName">Fornavn</label> </td><td><input id="fName"></td><td><div id="errorFname"></div></td></tr>
+                <tr><td><label for="lName">Etternavn</label></td><td><input id="lName"></td><td><div id="errorLname"></div></td></tr>
+                <tr><td><label for="pNumber">Telefonnr</label></td><td><input id="pNumber"></td><td><div id="errorPnumber"></div></td></tr>
+                <tr><td><label for="email">Epost</label></td><td><input id="email"></td><td><div id="errorEmail"></div></td></tr>
+            </table>
+            <button class="btn btn-primary" id="registerTicket">Kjøp billett</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <br><br>
+            <h2>Alle billetter</h2>
+            <div id="allTickets"></div>
+            <div id='deletedOne'></div>
+            <br>
 
-<br><br>
-<table>
-    <tr><td><label for="fName">Fornavn</label> </td><td><input id="fName"></td><td><div id="errorFname"></div></td></tr>
-    <tr><td><label for="lName">Etternavn</label></td><td><input id="lName"></td><td><div id="errorLname"></div></td></tr>
-    <tr><td><label for="pNumber">Telefonnr</label></td><td><input id="pNumber"></td><td><div id="errorPnumber"></div></td></tr>
-    <tr><td><label for="email">Epost</label></td><td><input id="email"></td><td><div id="errorEmail"></div></td></tr>
-    <tr><td><button id="registerTicket">Kjøp billett</button></td></tr>
-</table>
+            <div>
+                <button  class="btn btn-danger" id="deleteTickets">Slett alle billettene</button>
+            </div>
+            <div id="deletedAll"></div>
+            <br>
 
-
-<h2>Alle billetter</h2>
-<div id="allTickets"></div>
-
-<button id="deleteTickets">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
