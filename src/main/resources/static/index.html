@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinovilletter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- it is okay to place the link to the js file in the header, because we have the ready function -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+<label for="movie">Velg film:</label>
+<select name="movie" id="movie">
+    <option value="" selected disabled>Velg film her</option>
+    <option value="Kung fu Panda">Kung fu Panda</option>
+    <option value="Shrek">Shrek</option>
+    <option value="Rottatouille">Rottatouille</option>
+</select>
+<span id="errorMovie"></span>
+
+<br><br>
+<label for="nrOfTickets">Antall</label>
+<input type="text" id="nrOfTickets" style="width: 28px">
+<span id="errorNumber"></span>
+<!--Can I style width with bootstrap?-->
+
+<br><br>
+<table>
+    <tr><td><label for="fName">Fornavn</label> </td><td><input id="fName"></td><td><div id="errorFname"></div></td></tr>
+    <tr><td><label for="lName">Etternavn</label></td><td><input id="lName"></td><td><div id="errorLname"></div></td></tr>
+    <tr><td><label for="pNumber">Telefonnr</label></td><td><input id="pNumber"></td><td><div id="errorPnumber"></div></td></tr>
+    <tr><td><label for="email">Epost</label></td><td><input id="email"></td><td><div id="errorEmail"></div></td></tr>
+    <tr><td><button id="registerTicket">Kjøp billett</button></td></tr>
+</table>
+
+
+<h2>Alle billetter</h2>
+<div id="allTickets"></div>
+
+<button id="deleteTickets">Slett alle billettene</button>
+
+</body>
+</html>
